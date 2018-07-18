@@ -1,0 +1,12 @@
+2018-07-18 14:28:49,801 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10001} connected
+2018-07-18 14:28:49,810 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10002} connected
+2018-07-18 14:28:49,834 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10003} connected
+2018-07-18 14:28:49,841 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10004} connected
+2018-07-18 14:28:49,847 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10005} connected
+2018-07-18 14:28:49,852 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10005} pool-connect
+2018-07-18 14:28:49,855 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10005} pool-recycle
+2018-07-18 14:28:49,857 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10005} pool-connect
+2018-07-18 14:28:49,858 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.sql.Statement:? {conn-10005, stmt-20000} created
+2018-07-18 14:28:50,006 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.sql.Statement:? {conn-10005, stmt-20000, rs-50000} query executed. 146.514452 millis. SELECT 1 FROM DUAL
+2018-07-18 14:28:50,010 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.sql.Statement:? {conn-10005, stmt-20000} closed
+2018-07-18 14:28:50,010 [DEBUG] [RMI TCP Connection(3)-127.0.0.1] d.s.Connection:? {conn-10005} pool-recycle

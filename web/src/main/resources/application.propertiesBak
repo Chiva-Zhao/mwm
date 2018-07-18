@@ -1,0 +1,93 @@
+#
+# Copyright (c) 2018. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+# Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+# Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+# Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+# Vestibulum commodo. Ut rhoncus gravida arcu.
+#
+spring.profiles.active=dev
+# \u6240\u6709\u73AF\u5883\u901A\u7528\u7684\u914D\u7F6E\uFF0C\u653E\u5728\u8FD9\u91CC
+dubbo.group=f6-${spring.profiles.active}
+dubbo.zookeeper-url=zk.f6car:2181
+dubbo.application=f6-${spring.application.name}
+dubbo.port=-1
+dubbo.serialization=java
+dubbo.owner=qixiaobo
+dubbo.time-out=10000
+dubbo.ref-url=
+dubbo.start-up-check=false
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=ENC(zjdITWU2MWpHaOdcF8nG+w==)
+spring.datasource.initialSize=5
+spring.datasource.minIdle=5
+spring.datasource.maxActive=20
+# \u914D\u7F6E\u83B7\u53D6\u8FDE\u63A5\u7B49\u5F85\u8D85\u65F6\u7684\u65F6\u95F4
+spring.datasource.maxWait=60000
+# \u914D\u7F6E\u95F4\u9694\u591A\u4E45\u624D\u8FDB\u884C\u4E00\u6B21\u68C0\u6D4B\uFF0C\u68C0\u6D4B\u9700\u8981\u5173\u95ED\u7684\u7A7A\u95F2\u8FDE\u63A5\uFF0C\u5355\u4F4D\u662F\u6BEB\u79D2
+spring.datasource.timeBetweenEvictionRunsMillis=60000
+# \u914D\u7F6E\u4E00\u4E2A\u8FDE\u63A5\u5728\u6C60\u4E2D\u6700\u5C0F\u751F\u5B58\u7684\u65F6\u95F4\uFF0C\u5355\u4F4D\u662F\u6BEB\u79D2
+spring.datasource.minEvictableIdleTimeMillis=300000
+spring.datasource.validationQuery=SELECT 1 FROM DUAL
+spring.datasource.testWhileIdle=true
+spring.datasource.testOnBorrow=false
+spring.datasource.testOnReturn=false
+# \u6253\u5F00PSCache\uFF0C\u5E76\u4E14\u6307\u5B9A\u6BCF\u4E2A\u8FDE\u63A5\u4E0APSCache\u7684\u5927\u5C0F
+spring.datasource.poolPreparedStatements=true
+spring.datasource.maxPoolPreparedStatementPerConnectionSize=20
+# \u914D\u7F6E\u76D1\u63A7\u7EDF\u8BA1\u62E6\u622A\u7684filters\uFF0C\u53BB\u6389\u540E\u76D1\u63A7\u754C\u9762sql\u65E0\u6CD5\u7EDF\u8BA1\uFF0C'wall'\u7528\u4E8E\u9632\u706B\u5899
+spring.datasource.filters=stat,slf4j
+# \u901A\u8FC7connectProperties\u5C5E\u6027\u6765\u6253\u5F00mergeSql\u529F\u80FD\uFF1B\u6162SQL\u8BB0\u5F55
+spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+spring.datasource.useGlobalDataSourceStat=true
+# 404 \u4EA4\u7ED9\u5F02\u5E38\u5904\u7406\u5668\u5904\u7406
+spring.mvc.throw-exception-if-no-handler-found=true
+spring.resources.add-mappings=false
+server.port=8079
+server.undertow.accesslog.dir=${user.dir}/logs
+server.undertow.accesslog.enabled=true
+server.undertow.accesslog.pattern=common
+server.undertow.accesslog.prefix=access_log.
+server.undertow.accesslog.rotate=true
+server.undertow.accesslog.suffix=log
+server.undertow.buffer-size=4096
+server.undertow.direct-buffers=true
+server.undertow.io-threads=4
+server.undertow.worker-threads=100
+server.tomcat.max-threads=100
+server.tomcat.uri-encoding=UTF-8
+server.contextPath=/${spring.application.name}
+server.session.cookie.name=${spring.application.name}SESSIONID
+sso.login-url=http://${sso.cookie-domain}:9001
+sso.logout-url=http://${sso.cookie-domain}:8080/kzf6/logout.do
+sso.cookie-browser=false
+management.context-path=/manage
+error.whitelabel.enabled=false
+management.address=127.0.0.1
+spring.application.name=zeus
+logging.path=${user.dir}/logs
+logging.file=${logging.path}/${spring.application.name}.log
+logging.email.subject=${spring.application.name}-${spring.profiles.active}-NOTICE-%m{30}
+resource.resource-handler-list[0].pattern=/ui/**
+resource.resource-handler-list[0].location=file:${user.dir}/ui/
+j2cache.config-location=/j2cache/j2cache-${spring.profiles.active}.properties
+spring.devtools.restart.enabled=false
+spring.cluster=false
+upyun.bucket-name=f6carzone
+upyun.user-name=f6carzone
+upyun.password=f6carzone123
+upyun.timeout=120
+upyun.host=http://${upyun.bucket-name}.b0.upaiyun.com
+upyun.dir-root=/${spring.application.name}/
+aftercommit.thread=5
+jwt.token-expiration-time=120
+# Minutes
+jwt.refresh-token-exp-time=720
+jwt.token-issuer=f6car
+jwt.token-signing-key=xm8EV6Hy5RMFK4EEACIDAwQaW
+jwt.signature-algorithm=HS384
+web.secure=kisso
+jasypt.encryptor.password=f6car
+web.rate=true
+web.rate.limit-in-second=20
+web.rate.warn-up-in-second=60
