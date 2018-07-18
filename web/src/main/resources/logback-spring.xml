@@ -19,7 +19,7 @@
     <springProperty scope="context" name="email.from" source="logging.email.from"
                     defaultValue="f6@f6car.com"/>
     <springProperty scope="context" name="email.to" source="logging.email.to"
-                    defaultValue="qixiaobo@f6car.com"/>
+                    defaultValue=""/>
     <springProperty scope="context" name="email.subject" source="logging.email.subject"
                     defaultValue="ZEUS-NOTICE-DEV-%m{30}"/>
     <springProperty scope="context" name="email.smtp.host" source="logging.email.smtp.host"
@@ -145,5 +145,7 @@
     </logger>
     <!--开发环境. 多个使用逗号隔开. -->
 
+
+</configuration>
 
 </configuration>
